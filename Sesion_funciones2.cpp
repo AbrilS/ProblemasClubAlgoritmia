@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+unsigned long long exponenciar(unsigned long long a, unsigned long long b)
+{
+	unsigned long long c=1;
+	while(b--)
+	{
+		c*=a;
+	}
+	return c;
+}
+
+
+int main()
+{
+	unsigned long long w,x,y,z;
+	cin>>w>>x>>y>>z;
+	unsigned long long resu= exponenciar(((exponenciar(w,x)+exponenciar(x,w))/(exponenciar(y,z)-exponenciar(z,y))),w+x-y-z);
+	cout<<resu;
+	return 0;
+}
